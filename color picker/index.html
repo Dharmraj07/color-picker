@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- This form allows the user to select a color using a color picker interface -->
+    <form action="#" for="color-picker">
+      <label for="color-picker">Select a Color</label><br />
+      <input type="color" id="color-picker" />
+      <!-- When the user selects a new color, the background color of the body element is updated to the selected color -->
+      <script>
+        const color = document.getElementById("color-picker");
+        const display = document.querySelector("body");
+        color.addEventListener("change", () => {
+          display.style.backgroundColor = color.value;
+        });
+      </script>
+    </form>
+  </body>
+</html>
